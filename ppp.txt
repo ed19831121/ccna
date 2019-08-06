@@ -1,0 +1,25 @@
+en
+conf t
+host r1
+username r2 password cisco2
+int s0/1/0
+ip add 12.1.1.1 255.255.255.0
+no shut
+encapsulation ppp
+ppp pap sent-username r1 password cisco1
+exit
+
+
+
+en
+conf t
+host r2
+username r2 password cisco1
+int s0/1/0
+ip add 12.1.1.2 255.255.255.0
+no shut
+encapsulation ppp
+ppp pap sent-username r2 password cisco2
+
+
+
